@@ -1,32 +1,16 @@
-/** \brief A program that uses the Vehicle class.   
-  
-	Detailed description starts here.
+/*! A test class */
+class Test
+{
+public:
+/** An enum type.
+* The documentation block cannot be put after the enum!
 */
-#include <iostream> 
-using namespace std; 
- 
-// Declare the Vehicle class. 
-class Vehicle {  
-public: 
-  int passengers; // number of passengers  
-  int fuelcap;    // fuel capacity in gallons 
-  int mpg;        // fuel consumption in miles per gallon 
-}; 
-  
-int main() {  
-  Vehicle minivan; // create a Vehicle object 
-  int range;  
- 
-  // Assign values to fields in minivan. 
-  minivan.passengers = 7; 
-  minivan.fuelcap = 16; 
-  minivan.mpg = 21; 
-  
-  // Compute the range assuming a full tank of gas. 
-  range = minivan.fuelcap * minivan.mpg; 
-  
-  cout << "Minivan can carry " <<  minivan.passengers << 
-          " with a range of " << range << "\n";  
- 
-  return 0; 
-} 
+enum EnumType
+{
+int EVal1, /**< enum value 1 */
+int EVal2 /**< enum value 2 */
+};
+void member(); //!< a member function.
+protected:
+int value; /*!< an integer value */
+};
